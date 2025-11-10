@@ -4,5 +4,5 @@ Feature: New user view
   Scenario: Validate new user after clicking on Registration
 
     Given user navigates to the Login Page
-#    When user clicks on new registration button
-#    And then should be able to view the registration page
+    When user clicks on new registration button
+    And then should be able to view the registration page

@@ -22,7 +22,6 @@ public class SignInPage {
 
     }
 
-
     @FindBy(id="//input[@id='usr']")
     WebElement username_text;
     @FindBy(id="//input[@id='pwd']")
@@ -35,11 +34,11 @@ public class SignInPage {
 
     public void sendKeys_username() {
 
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//        wait.until(ExpectedConditions.elementToBeClickable(username_text)).sendKeys("sam");
+      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+      wait.until(ExpectedConditions.elementToBeClickable(username_text)).sendKeys("sam");
 
-       username_text.sendKeys("sam");
-    }
+//       username_text.sendKeys("sam");
+   }
 
     public void sendKeys_password() {
         password_text.sendKeys("alex");

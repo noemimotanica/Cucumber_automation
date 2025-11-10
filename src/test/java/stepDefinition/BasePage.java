@@ -1,13 +1,11 @@
-package StepDefinition;
+package stepDefinition;
 
 import io.cucumber.java.en.Given;
-import io.qameta.allure.internal.shadowed.jackson.databind.ser.Serializers;
 import pages.HomePage;
-import pages.HomePage.*;
 
 //import static pages.HomePage.click_hamburger_menu;
 //import static pages.HomePage.click_signIn_portal;
-import static utility.BrowserDriver.driver;
+
 
 public class BasePage {
     HomePage homePage;//create object for the class
