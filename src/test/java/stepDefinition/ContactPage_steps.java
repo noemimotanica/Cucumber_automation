@@ -17,20 +17,22 @@ public class ContactPage_steps {
         contactPage.click_hamburger_menu();
         contactPage.click_contactPage();
     }
+
     @When("user clicks on Read the full documentation link")
     public void user_clicks_on_read_the_full_documentation_link() {
-
+//
         contactPage.click_linkDocumentation();
-
+//
     }
+
     @Then("he will be able to see the Github Page")
     public void he_will_be_able_to_see_the_github_page() {
-
-//        contactPage.visibility_headingPage();
-
-        String actualGitHubPage =  contactPage.visibility_headingPage();
+//
+        contactPage.visibility_headingPage();
+//
+        String actualGitHubPage = contactPage.visibility_headingPage();
         assertEquals("GitHub Pages documentation", actualGitHubPage);
-
+//
     }
-
+//
 }

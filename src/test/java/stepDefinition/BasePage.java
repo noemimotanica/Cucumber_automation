@@ -1,6 +1,7 @@
 package stepDefinition;
 
 import io.cucumber.java.en.Given;
+import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 
 //import static pages.HomePage.click_hamburger_menu;
@@ -8,6 +9,7 @@ import pages.HomePage;
 
 
 public class BasePage {
+
     HomePage homePage;//create object for the class
 
 
