@@ -7,10 +7,14 @@ import org.junit.Assert;
 import pages.HomePage;
 import pages.OnlineProductsPage;
 
+import static utility.BrowserDriver.driver;
+
 public class OnlineProducts_steps {
 
-    HomePage homePage;
-    OnlineProductsPage onlineProductsPage;
+//    HomePage homePage;
+//    OnlineProductsPage onlineProductsPage;
+    HomePage homePage = new HomePage(driver);
+    OnlineProductsPage onlineProductsPage = new OnlineProductsPage(driver);
 
     @Given("user navigates to the Online Products Page")
     public void user_navigates_to_the_online_products_page() {

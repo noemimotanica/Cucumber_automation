@@ -3,12 +3,15 @@ package stepDefinition;
 import io.cucumber.java.en.When;
 import pages.SignInPage;
 
+import static utility.BrowserDriver.driver;
+
 //import  static pages.*;
 
 
 public class SignInPage_steps {
 
-    SignInPage signInPage;
+//    SignInPage signInPage;
+      SignInPage signInPage=new SignInPage(driver);
 
     @When("user successfully enters the credentials")
     public void user_successfully_enters_the_login_details() {

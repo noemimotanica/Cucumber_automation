@@ -8,12 +8,17 @@ import pages.RegistrationPage;
 import pages.SignInPage;
 
 import static org.junit.Assert.assertEquals;
+import static utility.BrowserDriver.driver;
 
 public class RegistrationPage_steps2 {
 
-    HomePage homePage;
-    RegistrationPage registrationPage;
-    SignInPage signInPage;
+//    HomePage homePage;
+//    RegistrationPage registrationPage;
+//    SignInPage signInPage;
+
+    HomePage homePage = new HomePage(driver);
+    RegistrationPage registrationPage = new RegistrationPage(driver);
+    SignInPage signInPage = new SignInPage(driver);
 
     @Given("user navigates to the Registration Page")
     public void user_navigates_to_the_registration_page() {

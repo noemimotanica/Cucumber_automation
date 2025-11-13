@@ -3,12 +3,14 @@ import io.cucumber.java.en.Then;
 import pages.RegistrationPage;
 
 import static org.junit.Assert.assertEquals;
+import static utility.BrowserDriver.driver;
 //import static pages.ProductCategoryPage.visibility_categoryPage;
 
 
 
 public class RegistrationPage_steps {
-   RegistrationPage registrationPage;
+//   RegistrationPage registrationPage;
+    RegistrationPage registrationPage = new RegistrationPage(driver);
 
 
 

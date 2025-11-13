@@ -30,8 +30,9 @@ public class ContactPage {
     }
 
     public  void  click_hamburger_menu(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(hamburger_menu)).click();
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        wait.until(ExpectedConditions.elementToBeClickable(hamburger_menu)).click();
+        hamburger_menu.click();
     }
     public void click_contactPage() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

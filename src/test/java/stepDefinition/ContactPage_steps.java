@@ -7,10 +7,11 @@ import org.openqa.selenium.WebDriver;
 import pages.ContactPage;
 
 import static org.junit.Assert.assertEquals;
+import static utility.BrowserDriver.driver;
 
 public class ContactPage_steps {
-
-    ContactPage contactPage;
+    ContactPage contactPage = new ContactPage(driver);
+//    ContactPage contactPage;
 
     @Given("user navigates to the Contact Page")
     public void user_navigates_to_the_contact_page() {

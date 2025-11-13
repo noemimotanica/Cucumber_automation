@@ -4,14 +4,16 @@ import io.cucumber.java.en.Given;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 
+import static utility.BrowserDriver.driver;
+
 //import static pages.HomePage.click_hamburger_menu;
 //import static pages.HomePage.click_signIn_portal;
 
 
 public class BasePage {
 
-    HomePage homePage;//create object for the class
-
+//    HomePage homePage;//create object for the class
+    HomePage homePage = new HomePage(driver);
 
     @Given("user navigates to the Login Page")
     public void user_navigates_to_the_login_page() throws Throwable {
