@@ -14,7 +14,7 @@ import static utility.BrowserDriver.driver;
 
 public class SignInPage {
 
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public  SignInPage (WebDriver driver) {
         this.driver = driver;

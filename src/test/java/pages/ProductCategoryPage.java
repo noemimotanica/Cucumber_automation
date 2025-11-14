@@ -5,12 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utility.Hooks;
 
 import static utility.BrowserDriver.driver;
 
-public class ProductCategoryPage {
+public class ProductCategoryPage extends Hooks {
 
-    private final WebDriver driver;
+    WebDriver driver;
 
     @FindBy(xpath = "//div[@id='SmokeTests']//h3[@id='ShoeType']")
     WebElement product_category_xpath;

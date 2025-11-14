@@ -4,8 +4,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 import pages.OnlineProductsPage;
+import utility.Hooks;
 
 import static utility.BrowserDriver.driver;
 
@@ -13,8 +15,8 @@ public class OnlineProducts_steps {
 
 //    HomePage homePage;
 //    OnlineProductsPage onlineProductsPage;
-    HomePage homePage = new HomePage(driver);
-    OnlineProductsPage onlineProductsPage = new OnlineProductsPage(driver);
+    HomePage homePage = new HomePage((WebDriver) Hooks.driver);
+    OnlineProductsPage onlineProductsPage = new OnlineProductsPage((WebDriver) Hooks.driver);
 
     @Given("user navigates to the Online Products Page")
     public void user_navigates_to_the_online_products_page() {

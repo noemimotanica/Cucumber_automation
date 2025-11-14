@@ -7,14 +7,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utility.Hooks;
 
 import java.time.Duration;
 
 import static utility.BrowserDriver.driver;
 
-public class HomePage {
-
-private final  WebDriver driver;
+public class HomePage extends Hooks {
+ WebDriver driver;
+//private final  WebDriver driver;
     @FindBy(xpath="//input[@type='checkbox']")
     WebElement hamburger_menu;
     @FindBy(xpath="//li[normalize-space()='Sign In Portal']")
@@ -30,9 +31,9 @@ private final  WebDriver driver;
 
     }
         public  void  click_hamburger_menu(){
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            wait.until(ExpectedConditions.elementToBeClickable(hamburger_menu)).click();
-//           hamburger_menu.click();
+//            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//            wait.until(ExpectedConditions.elementToBeClickable(hamburger_menu)).click();
+          hamburger_menu.click();
         }
 
 
