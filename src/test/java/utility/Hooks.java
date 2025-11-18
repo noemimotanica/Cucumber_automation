@@ -23,11 +23,15 @@ import org.openqa.selenium.chrome.ChromeOptions;
 //
 //}
 
-public class Hooks {
+public class Hooks extends BrowserDriver {
 
 
 
-    public static BrowserDriver driver;
+    public  BrowserDriver driver;
+
+    public Hooks(BrowserDriver driver) {
+        this.driver=driver;
+    }
 
     public static ChromeOptions options;
 

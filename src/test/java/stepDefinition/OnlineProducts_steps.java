@@ -15,8 +15,8 @@ public class OnlineProducts_steps {
 
 //    HomePage homePage;
 //    OnlineProductsPage onlineProductsPage;
-    HomePage homePage = new HomePage((WebDriver) Hooks.driver);
-    OnlineProductsPage onlineProductsPage = new OnlineProductsPage((WebDriver) Hooks.driver);
+    HomePage homePage = new HomePage(driver);
+    OnlineProductsPage onlineProductsPage = new OnlineProductsPage(driver);
 
     @Given("user navigates to the Online Products Page")
     public void user_navigates_to_the_online_products_page() {
