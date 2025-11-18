@@ -5,11 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import utility.Hooks;
 
-import java.time.Duration;
-
-public class OnlineProductsPage extends Hooks {
+public class OnlineProductsPage {
 
    WebDriver driver;
 

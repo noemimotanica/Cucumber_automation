@@ -4,19 +4,14 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.SignInPage;
-import utility.Hooks;
 
-import java.util.List;
-
-//import static utility.BrowserDriver.driver;
-
-//import  static pages.*;
+import static utility.BrowserDriver.driver;
 
 
 public class SignInPage_steps {
 
 //    SignInPage signInPage;
-      SignInPage signInPage=new SignInPage((WebDriver) Hooks.driver);
+      SignInPage signInPage=new SignInPage(driver);
 
 //    @When("user successfully enters the credentials")
 //    public void user_successfully_enters_the_login_details() {

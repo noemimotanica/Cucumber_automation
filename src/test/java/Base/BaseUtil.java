@@ -9,6 +9,7 @@ public class BaseUtil {
     public ExtentReports extent;
     public static ExtentTest scenarioDef;
     public static ExtentTest features;
+    public static ExtentTest extentTest;
     public static String reportLocation="/Users/npohrib/IdeaProjects/Cucumber/src/test/java/reports";
 
 }

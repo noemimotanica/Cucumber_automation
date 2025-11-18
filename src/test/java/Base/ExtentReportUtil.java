@@ -5,7 +5,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.google.common.io.Files;
-import lombok.var;
+//import lombok.var;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
