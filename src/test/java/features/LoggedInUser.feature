@@ -4,11 +4,12 @@ Feature: Logged in user view
   Scenario: User logs in with valid credentials
     Given user navigates to the Login Page
     When user successfully enters the credentials
-#      | username |  | password  |
-#      | Alex     |  | pisica123 |
+      | username |  | password  |
+      | Alex     |  | pisica123 |
     Then he should be able to view the product category page
 
-#Examples:
+
+
 
 
 

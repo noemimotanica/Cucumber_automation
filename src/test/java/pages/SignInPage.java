@@ -19,25 +19,25 @@ public class SignInPage {
 
     }
 
-    @FindBy(id="//input[@id='usr']")
+    @FindBy(xpath="//input[@id='usr']")
     WebElement username_text;
-    @FindBy(id="//input[@id='pwd']")
+    @FindBy(xpath="//input[@id='pwd']")
     WebElement password_text;
-    @FindBy(id="//input[@value='Login']")
+    @FindBy(xpath="//input[@value='Login']")
     WebElement login_btn ;
     @FindBy(xpath="//button[@id='NewRegistration']")
     WebElement registration_btn ;
 
 
-    public void sendKeys_username() {
+    public void sendKeys_username(String username) {
 
       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-      wait.until(ExpectedConditions.elementToBeClickable(username_text)).sendKeys("sam");
+      wait.until(ExpectedConditions.visibilityOf(username_text)).sendKeys("sam");
 
-//       username_text.sendKeys("sam");
+//     username_text.sendKeys("sam");
    }
 
-    public void sendKeys_password() {
+    public void sendKeys_password(String password) {
         password_text.sendKeys("alex");
     }
 

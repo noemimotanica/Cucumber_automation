@@ -5,6 +5,9 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.SignInPage;
 
+import java.util.List;
+import java.util.Map;
+
 import static utility.BrowserDriver.driver;
 
 
@@ -34,12 +37,20 @@ public class SignInPage_steps {
 
     @When("user successfully enters the credentials")
     public void userSuccessfullyEntersTheCredentials(DataTable table) {
+        List<List<String>> data = table.asLists();
+
+        String username = data.get(1).get(0);  // Alex
+        String password = data.get(1).get(2);  // pisica123
+
+        signInPage.sendKeys_username(username);
+        signInPage.sendKeys_password(password);
+        signInPage.click_loginBtn();
+
+
 //     List<List<String>> data  = table.raw();
 //        System.out.println(data.get(0).get(0));
 //        System.out.println(data.get(0).get(1));
-        signInPage.sendKeys_username();
-        signInPage.sendKeys_password();
-        signInPage.click_loginBtn();
+
 
     }
 }
