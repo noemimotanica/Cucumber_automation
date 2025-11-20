@@ -12,30 +12,30 @@ import org.openqa.selenium.TakesScreenshot;
 import java.io.File;
 import java.sql.Driver;
 
-public class ExtentReportUtil extends BaseUtil {
+//public class ExtentReportUtil extends BaseUtil {
 
-   String fileName=reportLocation + "extentreport.html";
- //create extent report object
-
-    public void ExtentReport() {
-     extent=new ExtentReports();
-     ExtentSparkReporter sparkReporter=new ExtentSparkReporter(fileName);
-     sparkReporter.config().setTheme(Theme.DARK);
-     sparkReporter.config().setDocumentTitle("Test report for Selenium basics");
-     sparkReporter.config().setEncoding("utf-8");
-     sparkReporter.config().setReportName("Test report");
-     extent.attachReporter(sparkReporter);
-
-    }
-
-//    public void extentReportScreenshot() {
-//        var scr= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-//        Files.copy(scr.toPath(), new File(reportLocation + "screenshot.png").toPath());
+//   String fileName=reportLocation + "extentreport.html";
+// //create extent report object
+//
+//    public void ExtentReport() {
+//     extent=new ExtentReports();
+//     ExtentSparkReporter sparkReporter=new ExtentSparkReporter(fileName);
+//     sparkReporter.config().setTheme(Theme.DARK);
+//     sparkReporter.config().setDocumentTitle("Test report for Selenium basics");
+//     sparkReporter.config().setEncoding("utf-8");
+//     sparkReporter.config().setReportName("Test report");
+//     extent.attachReporter(sparkReporter);
 //
 //    }
-
-    public void FlushExtentReport() {
-        extent.flush();
-    }
-
-}
+//
+////    public void extentReportScreenshot() {
+////        var scr= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+////        Files.copy(scr.toPath(), new File(reportLocation + "screenshot.png").toPath());
+////
+////    }
+//
+//    public void FlushExtentReport() {
+//        extent.flush();
+//    }
+//
+//}
