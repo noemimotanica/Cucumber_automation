@@ -4,7 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class OnlineProductsPage {
 
@@ -29,7 +33,10 @@ public class OnlineProductsPage {
 
 
     public void click_onlineProducts_menu(){
-        onlineProducts_menu.click();
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(onlineProducts_menu)).click();
+
+//       onlineProducts_menu.click();
     }
 
     public void click_formal_shoes_dropdown(){
