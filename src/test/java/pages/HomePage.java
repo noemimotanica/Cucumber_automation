@@ -26,42 +26,17 @@ public class HomePage  {
 
 
     }
-        public  void  click_hamburger_menu(){
+        public  void  clickHamburgerMenu(){
 //            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //            wait.until(ExpectedConditions.elementToBeClickable(hamburger_menu)).click();
           hamburger_menu.click();
         }
 
 
-       public void  click_signIn_portal(){
+       public void  clickSignInPortal(){
         WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(signIn_portal)).click();
-//        signIn_portal.click();
       }
-
-
-
-
-
-
-//    public static String hamburger_menu="//input[@type='checkbox']";
-//    public static String signIn_portal="//li[normalize-space()='Sign In Portal']";
-
-//        public static void click_hamburger_menu () throws InterruptedException {
-////        Thread.sleep(2000);
-//            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//            wait.until(ExpectedConditions.elementToBeClickable(By.xpath(hamburger_menu))).click();
-//
-////        driver.findElement(By.xpath(hamburger_menu)).click();
-//
-//        }
-//
-//        public static void click_signIn_portal () throws InterruptedException {
-////        Thread.sleep(2000);
-//            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//            wait.until(ExpectedConditions.elementToBeClickable(By.xpath(signIn_portal))).click();
-////        driver.findElement(By.xpath(signIn_portal)).click();
-//        }
 
     }
 

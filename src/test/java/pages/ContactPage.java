@@ -26,24 +26,18 @@ public class ContactPage {
     public ContactPage (WebDriver driver) {
         this.driver=driver;
         PageFactory.initElements(driver,this);
-
     }
 
-    public  void  click_hamburger_menu(){
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//        wait.until(ExpectedConditions.elementToBeClickable(hamburger_menu)).click();
-        hamburger_menu.click();
-    }
-    public void click_contactPage() {
+    public void clickContactPage() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(contactPage)).click();
     }
 
-    public void click_linkDocumentation() {
+    public void clickLinkDocumentation() {
       linkDocumentation.click();
     }
 
-    public String visibility_headingPage() {
+    public String visibilityHeadingPage() {
         return headingPage.getText();
     }
 

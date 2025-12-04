@@ -31,29 +31,25 @@ public class OnlineProductsPage {
        PageFactory.initElements(driver,this);
    }
 
-
-    public void click_onlineProducts_menu(){
+    public void clickOnlineProductsMenu(){
         WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(onlineProducts_menu)).click();
-
-//       onlineProducts_menu.click();
     }
 
-    public void click_formal_shoes_dropdown(){
+    public void clickFormalShoesDropdown(){
         formal_shoes_dropdown.click();
     }
 
-    public String visibility_shoesType(){
+    public String visibilityShoesType(){
         return shoes_type.getText();
-
     }
 
-    public void select_shoeColor(){
+    public void selectShoeColor(){
         Select select=new Select(colour_available);
         select.selectByVisibleText("Brown");
     }
 
-    public void select_sizeAvailable(){
+    public void selectSizeAvailable(){
         Select select=new Select(size_available);
         select.selectByVisibleText("8");
     }

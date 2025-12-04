@@ -16,7 +16,6 @@ public class SignInPage {
     public  SignInPage (WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-
     }
 
     @FindBy(xpath="//input[@id='usr']")
@@ -29,58 +28,23 @@ public class SignInPage {
     WebElement registration_btn ;
 
 
-    public void sendKeys_username(String username) {
+    public void sendKeysUsername(String username) {
 
       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
       wait.until(ExpectedConditions.visibilityOf(username_text)).sendKeys("sam");
-
-//     username_text.sendKeys("sam");
    }
 
-    public void sendKeys_password(String password) {
+    public void sendKeysPassword(String password) {
         password_text.sendKeys("alex");
     }
 
-    public void click_loginBtn() {
+    public void clickLoginBtn() {
        login_btn.click();
     }
 
-    public void click_registrationBtn() {
+    public void clickRegistrationBtn() {
        registration_btn.click();
     }
-
-
-
-
-
-//    public static String username_text="//input[@id='usr']";
-//    public static String password_text="//input[@id='pwd']";
-//    public static String login_btn="//input[@value='Login']";
-//    public static String registration_btn="//button[@id='NewRegistration']";
-
-
-//    public static void sendKeys_username() {
-//        driver.findElement(By.xpath(username_text)).sendKeys("sam");
-//
-//    }
-
-//
-//    public static void sendKeys_password() {
-//    driver.findElement(By.xpath(password_text)).sendKeys("alex");
-//
-//    }
-
-//    public static void click_loginBtn() {
-//        driver.findElement(By.xpath(login_btn)).click();
-//
-//    }
-//
-//    public static void click_registrationBtn() {
-//        driver.findElement(By.xpath(registration_btn)).click();
-//
-//    }
-
-
 }
 
 

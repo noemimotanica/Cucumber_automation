@@ -17,18 +17,9 @@ public class ProductCategoryPage {
         PageFactory.initElements(driver, this);
     }
 
-    public String visibility_categoryPage() {
+    public String visibilityCategoryPage() {
         return product_category_xpath.getText();
-
     }
-
 }
 
-//    public static String product_category_xpath="//div[@id='SmokeTests']//h3[@id='ShoeType']";
-
-//    public static String visibility_categoryPage() {
-//       String actualProductCategory= driver.findElement(By.xpath(product_category_xpath)).getText();
-//       return actualProductCategory;
-//
-//    }
 

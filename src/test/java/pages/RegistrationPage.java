@@ -1,6 +1,5 @@
 package pages;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,12 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
-
-
-
-
 
 public class RegistrationPage {
 
@@ -57,72 +51,52 @@ public class RegistrationPage {
         PageFactory.initElements(driver,this);
     }
 
-    public String visibility_RegistrationPage() {
+    public String visibilityRegistrationPage() {
         return registration_heading_xpath.getText();
     }
 
-    public void selectSalutation_dropdown(String value) {
+    public void selectSalutationDropdown(String value) {
 
         Select select = new Select(salutationDropdown_xpath);
         select.selectByVisibleText(value);
-
     }
 
-
-  public void sendKeys_firstname(String Firstname) {
+  public void sendKeysFirstName(String Firstname) {
       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
       wait.until(ExpectedConditions.elementToBeClickable(firstName_field)).sendKeys(Firstname);
-
   }
 
-    public void sendKeys_lastname(String lastName) {
+    public void sendKeysLastName(String lastName) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(lastName_field)).sendKeys(lastName);
     }
 
-    public void sendKeys_emailId(String email) {
+    public void sendKeysEmailId(String email) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(emailId_field)).sendKeys(email);
     }
 
-    public void sendKeys_contactNumber(String contactNumberT) {
+    public void sendKeysContactNumber(String contactNumberT) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(contactNumber)).sendKeys(contactNumberT);
     }
 
-    public void sendKeys_userName(String username) {
+    public void sendKeysUserName(String username) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(userName_field)).sendKeys(username);
     }
 
-    public void sendKeys_password(String password) {
+    public void sendKeysPassword(String password) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(password_field)).sendKeys(password);
     }
 
-    public void submitButton_registration() {
+    public void submitButtonRegistration() {
         submitButton.click();
     }
 
-    public String visibility_successfulMessage_registration() {
+    public String visibilitySuccessfulMessageRegistration() {
        return successfulMessage_registration.getText();
     }
 
-
-
-
-
-
-
-
-//    public static String registration_heading_xpath="//h1[normalize-space()='User Registration Page']";
-//
-//
-//    public static String visibility_RegistrationPage() {
-//
-//
-//        String actualRegistrationPageHeading= driver.findElement(By.xpath(registration_heading_xpath)).getText();
-//        return actualRegistrationPageHeading;
-//
-//    }
 }
