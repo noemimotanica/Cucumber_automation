@@ -5,7 +5,7 @@ import pages.HomePage;
 
 import static utility.BrowserDriver.driver;
 
-public class BasePage {
+public class HomePageSteps {
 
 //    HomePage homePage;//create object for the class
     HomePage homePage = new HomePage(driver);

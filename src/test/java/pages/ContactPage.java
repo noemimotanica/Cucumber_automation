@@ -25,8 +25,12 @@ public class ContactPage {
 
     public ContactPage (WebDriver driver) {
         this.driver=driver;
+//        super()
         PageFactory.initElements(driver,this);
     }
+
+
+
 
     public void clickContactPage() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
