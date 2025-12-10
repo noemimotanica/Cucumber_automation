@@ -19,7 +19,7 @@ public class ContactPage {
     WebElement  contactPage ;
     @FindBy(xpath="//a[normalize-space()='Read the full documentation']")
     WebElement  linkDocumentation ;
-    @FindBy(xpath="//h1[@id='title-h1']")
+    @FindBy(id="#title-h1")
     WebElement  headingPage ;
 
 
