@@ -19,7 +19,7 @@ public class ContactPage {
     WebElement  contactPage ;
     @FindBy(xpath="//a[normalize-space()='Read the full documentation']")
     WebElement  linkDocumentation ;
-    @FindBy(id="#title-h1")
+    @FindBy(xpath="//h2[normalize-space()='Start here']")
     WebElement  headingPage ;
 
 
@@ -38,7 +38,7 @@ public class ContactPage {
     }
 
     public void clickLinkDocumentation() {
-      linkDocumentation.click();
+        linkDocumentation.click();
     }
 
     public String visibilityHeadingPage() {

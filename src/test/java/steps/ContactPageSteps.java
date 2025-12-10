@@ -28,6 +28,6 @@ public class ContactPageSteps {
     public void githubPageView() {
         contactPage.visibilityHeadingPage();
         String actualGitHubPage = contactPage.visibilityHeadingPage();
-        assertEquals("GitHub Pages documentation", actualGitHubPage);
+        assertEquals("Quickstart", actualGitHubPage);
     }
 }
