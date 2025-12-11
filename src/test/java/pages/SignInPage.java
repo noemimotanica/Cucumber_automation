@@ -6,16 +6,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.IOException;
 import java.time.Duration;
 
 
-public class SignInPage {
+public class SignInPage extends BasePage{
 
-    private final WebDriver driver;
+     WebDriver driver;
 
-    public  SignInPage (WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+    public  SignInPage (WebDriver driver) throws IOException {
+        super();
+//        this.driver = driver;
+//        PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath="//input[@id='usr']")
@@ -29,21 +32,24 @@ public class SignInPage {
 
 
     public void sendKeysUsername(String username) {
-
-      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-      wait.until(ExpectedConditions.visibilityOf(username_text)).sendKeys("sam");
+      clearAndSendKeys(username_text,username);
+//      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//      wait.until(ExpectedConditions.visibilityOf(username_text)).sendKeys("sam");
    }
 
     public void sendKeysPassword(String password) {
-        password_text.sendKeys("alex");
+        clearAndSendKeys(password_text,password);
+//        password_text.sendKeys("alex");
     }
 
     public void clickLoginBtn() {
-       login_btn.click();
+       waitForElementToBeClickable(login_btn);
+//        login_btn.click();
     }
 
     public void clickRegistrationBtn() {
-       registration_btn.click();
+       waitForElementToBeClickable(registration_btn);
+//        registration_btn.click();
     }
 }
 

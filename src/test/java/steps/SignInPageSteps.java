@@ -3,12 +3,17 @@ package steps;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.When;
 import pages.SignInPage;
+
+import java.io.IOException;
 import java.util.List;
-import static utility.BrowserDriver.driver;
+
 
 public class SignInPageSteps {
 
       SignInPage signInPage=new SignInPage(driver);
+
+    public SignInPageSteps() throws IOException {
+    }
 
     @When("user clicks on new registration button")
     public void clicksRegistrationButton() {

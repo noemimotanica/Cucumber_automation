@@ -7,42 +7,47 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
 import java.time.Duration;
 
-public class ContactPage {
+public class ContactPage extends BasePage {
 
-    private final WebDriver driver;
+    WebDriver driver;
+    protected String baseUrl;
+    protected WebDriverWait wait;
 
-    @FindBy(xpath="//input[@type='checkbox']")
+    @FindBy(xpath = "//input[@type='checkbox']")
     WebElement hamburger_menu;
-    @FindBy(xpath="//li[normalize-space()='Contact']")
-    WebElement  contactPage ;
-    @FindBy(xpath="//a[normalize-space()='Read the full documentation']")
-    WebElement  linkDocumentation ;
-    @FindBy(xpath="//h2[normalize-space()='Start here']")
-    WebElement  headingPage ;
+    @FindBy(xpath = "//li[normalize-space()='Contact']")
+    WebElement contactPage;
+    @FindBy(xpath = "//a[normalize-space()='Read the full documentation']")
+    WebElement linkDocumentation;
+    @FindBy(xpath = "//h2[normalize-space()='Start here']")
+    WebElement headingPage;
 
 
-    public ContactPage (WebDriver driver) {
-        this.driver=driver;
-//        super()
-        PageFactory.initElements(driver,this);
+    public ContactPage(WebDriver driver) throws IOException {
+        super();
     }
 
-
-
-
     public void clickContactPage() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(contactPage)).click();
+        waitForElementToBeClickable(contactPage);
+        click(contactPage);
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        wait.until(ExpectedConditions.elementToBeClickable(contactPage)).click();
     }
 
     public void clickLinkDocumentation() {
-        linkDocumentation.click();
+        waitForElementToBeClickable(linkDocumentation);
+        click(linkDocumentation);
+//        linkDocumentation.click();
     }
 
     public String visibilityHeadingPage() {
-        return headingPage.getText();
+       return grabTextFromElement(headingPage);
+//        waitForElementVisibility(headingPage);
+//        return headingPage.getText();
     }
+
 
 }

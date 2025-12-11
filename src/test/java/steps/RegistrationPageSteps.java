@@ -7,14 +7,19 @@ import pages.HomePage;
 import pages.RegistrationPage;
 import pages.SignInPage;
 
+import java.io.IOException;
+
 import static org.junit.Assert.assertEquals;
-import static utility.BrowserDriver.driver;
+
 
 public class RegistrationPageSteps {
 
     HomePage homePage = new HomePage(driver);
     RegistrationPage registrationPage = new RegistrationPage(driver);
     SignInPage signInPage = new SignInPage(driver);
+
+    public RegistrationPageSteps() throws IOException {
+    }
 
     @Given("user navigates to the Registration Page")
     public void navigateToRegistrationPage() {

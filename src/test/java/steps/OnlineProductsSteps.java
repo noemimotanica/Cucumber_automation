@@ -6,13 +6,15 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.OnlineProductsPage;
-
-import static utility.BrowserDriver.driver;
+import java.io.IOException;
 
 public class OnlineProductsSteps {
 
     HomePage homePage = new HomePage(driver);
     OnlineProductsPage onlineProductsPage = new OnlineProductsPage(driver);
+
+    public OnlineProductsSteps() throws IOException {
+    }
 
     @Given("user navigates to the Online Products Page")
     public void navigateToOnlineProductsPage() {

@@ -8,9 +8,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.IOException;
 import java.time.Duration;
 
-public class OnlineProductsPage {
+public class OnlineProductsPage extends BasePage {
 
    WebDriver driver;
 
@@ -26,32 +27,41 @@ public class OnlineProductsPage {
     WebElement size_available;
 
 
-   public OnlineProductsPage(WebDriver driver) {
-       this.driver=driver;
-       PageFactory.initElements(driver,this);
+   public OnlineProductsPage(WebDriver driver) throws IOException {
+       super();
+//       this.driver=driver;
+//       PageFactory.initElements(driver,this);
    }
 
     public void clickOnlineProductsMenu(){
-        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(onlineProducts_menu)).click();
+
+        waitForElementToBeClickable(onlineProducts_menu);
+        click(onlineProducts_menu);
+
+//        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+//        wait.until(ExpectedConditions.elementToBeClickable(onlineProducts_menu)).click();
     }
 
     public void clickFormalShoesDropdown(){
-        formal_shoes_dropdown.click();
+        click(formal_shoes_dropdown);
+//       formal_shoes_dropdown.click();
     }
 
     public String visibilityShoesType(){
-        return shoes_type.getText();
+     return grabTextFromElement(shoes_type);
+//       return shoes_type.getText();
     }
 
     public void selectShoeColor(){
-        Select select=new Select(colour_available);
-        select.selectByVisibleText("Brown");
+    selectByVisibleText(colour_available, "Brown");
+//        Select select=new Select(colour_available);
+//        select.selectByVisibleText("Brown");
     }
 
     public void selectSizeAvailable(){
-        Select select=new Select(size_available);
-        select.selectByVisibleText("8");
+       selectByVisibleText(size_available,"8");
+//        Select select=new Select(size_available);
+//        select.selectByVisibleText("8");
     }
 
 }
