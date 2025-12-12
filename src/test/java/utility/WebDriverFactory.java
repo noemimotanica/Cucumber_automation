@@ -9,10 +9,10 @@ import org.openqa.selenium.safari.SafariDriver;
 import java.io.IOException;
 
 // Factory Pattern
- WebDriver driver;
+
 public class WebDriverFactory {
 
-    public static WebDriver getDriver() throws IOException {
+    public static WebDriver getDriver()  {
 
         WebDriver driver = null;
 

@@ -10,7 +10,7 @@ public class ProductCategoryPage extends BasePage {
     @FindBy(xpath = "//div[@id='SmokeTests']//h3[@id='ShoeType']")
     WebElement product_category_xpath;
 
-    public ProductCategoryPage {
+    public ProductCategoryPage () {
         super();
 //        this.driver = driver;
 //        PageFactory.initElements(driver, this);

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class SignInPage extends BasePage{
 
 
-    public  SignInPage {
+    public  SignInPage () {
         super();
 //        this.driver = driver;
 //        PageFactory.initElements(driver, this);

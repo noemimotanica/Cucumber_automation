@@ -11,14 +11,13 @@ import java.time.Duration;
 
 public class HomePage extends BasePage  {
 
-
     //private final  WebDriver driver;
     @FindBy(xpath="//input[@type='checkbox']")
     WebElement hamburger_menu;
     @FindBy(xpath="//li[normalize-space()='Sign In Portal']")
     WebElement signIn_portal;
 
-    public HomePage {
+    public HomePage() {
         //without return type, same name as class
         //Webdriver instance
             super();

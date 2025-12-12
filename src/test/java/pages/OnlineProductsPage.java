@@ -18,7 +18,7 @@ public class OnlineProductsPage extends BasePage {
     WebElement size_available;
 
 
-   public OnlineProductsPage {
+   public OnlineProductsPage() {
        super();
 //       this.driver=driver;
 //       PageFactory.initElements(driver,this);

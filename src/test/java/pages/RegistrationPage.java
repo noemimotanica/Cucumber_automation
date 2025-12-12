@@ -38,7 +38,7 @@ public class RegistrationPage extends BasePage {
     @FindBy(xpath = "//h1[normalize-space()='User Registered Successfully !!!']")
     WebElement successfulMessage_registration;
 
-    public RegistrationPage {
+    public RegistrationPage () {
         super();
 //        this.driver=driver;
 //        PageFactory.initElements(driver,this);
