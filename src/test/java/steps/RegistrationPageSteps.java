@@ -6,19 +6,16 @@ import io.cucumber.java.en.When;
 import pages.HomePage;
 import pages.RegistrationPage;
 import pages.SignInPage;
-
-import java.io.IOException;
-
 import static org.junit.Assert.assertEquals;
 
 
 public class RegistrationPageSteps {
 
-    HomePage homePage = new HomePage(driver);
-    RegistrationPage registrationPage = new RegistrationPage(driver);
-    SignInPage signInPage = new SignInPage(driver);
+    HomePage homePage = new HomePage();
+    RegistrationPage registrationPage = new RegistrationPage();
+    SignInPage signInPage = new SignInPage();
 
-    public RegistrationPageSteps() throws IOException {
+    public RegistrationPageSteps() {
     }
 
     @Given("user navigates to the Registration Page")

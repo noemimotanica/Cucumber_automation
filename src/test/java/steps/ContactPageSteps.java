@@ -3,19 +3,16 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebElement;
 import pages.ContactPage;
 import pages.HomePage;
-
-import java.io.IOException;
-
 import static org.junit.Assert.assertEquals;
 
 public class ContactPageSteps {
-    ContactPage contactPage = new ContactPage(driver);
-    HomePage homePage = new HomePage(driver);
 
-    public ContactPageSteps() throws IOException {
+    ContactPage contactPage = new ContactPage();
+    HomePage homePage = new HomePage();
+
+    public ContactPageSteps()  {
 
     }
 

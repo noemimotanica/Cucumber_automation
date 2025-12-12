@@ -12,10 +12,6 @@ import java.time.Duration;
 
 public class ContactPage extends BasePage {
 
-    WebDriver driver;
-    protected String baseUrl;
-    protected WebDriverWait wait;
-
     @FindBy(xpath = "//input[@type='checkbox']")
     WebElement hamburger_menu;
     @FindBy(xpath = "//li[normalize-space()='Contact']")
@@ -26,7 +22,7 @@ public class ContactPage extends BasePage {
     WebElement headingPage;
 
 
-    public ContactPage(WebDriver driver) throws IOException {
+    public ContactPage {
         super();
     }
 

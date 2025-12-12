@@ -10,9 +10,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 public class HomePage extends BasePage  {
-    WebDriver driver;
-    protected String baseUrl;
-    protected WebDriverWait wait;
+
 
     //private final  WebDriver driver;
     @FindBy(xpath="//input[@type='checkbox']")
@@ -20,7 +18,7 @@ public class HomePage extends BasePage  {
     @FindBy(xpath="//li[normalize-space()='Sign In Portal']")
     WebElement signIn_portal;
 
-    public HomePage (WebDriver driver) throws IOException {
+    public HomePage {
         //without return type, same name as class
         //Webdriver instance
             super();

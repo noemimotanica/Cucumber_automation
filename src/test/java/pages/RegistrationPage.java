@@ -1,20 +1,12 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.IOException;
-import java.time.Duration;
+
 
 public class RegistrationPage extends BasePage {
-
-
-     WebDriver driver;
 
     @FindBy(xpath = "//h1[normalize-space()='User Registration Page']")
     WebElement registration_heading_xpath;
@@ -46,7 +38,7 @@ public class RegistrationPage extends BasePage {
     @FindBy(xpath = "//h1[normalize-space()='User Registered Successfully !!!']")
     WebElement successfulMessage_registration;
 
-    public RegistrationPage (WebDriver driver) throws IOException {
+    public RegistrationPage {
         super();
 //        this.driver=driver;
 //        PageFactory.initElements(driver,this);

@@ -6,9 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utility.WebDriverFactory;
-
-import java.io.IOException;
 import java.lang.reflect.Field;
 import java.time.Duration;
 
@@ -22,8 +19,7 @@ public class BasePage {
 
         public static final int EXPLICIT_WAIT = 10;
 
-
-        public BasePage() throws IOException {
+        public BasePage() {
 
             this.baseUrl = "https://anupdamoda.github.io/AceOnlineShoePortal/index.html";
 

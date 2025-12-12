@@ -2,18 +2,14 @@ package steps;
 
 import io.cucumber.java.en.Then;
 import pages.ProductCategoryPage;
-
-import java.io.IOException;
 import static org.junit.Assert.assertEquals;
-
-
 
 public class ProductCategoryPageSteps {
 
 //   ProductCategoryPage productCategoryPage;//fiecare pagina e o clasa si aici declaram obiectul clasei si prin obiect putem folosi metodele clasei
-    ProductCategoryPage productCategoryPage=new ProductCategoryPage(driver);
+    ProductCategoryPage productCategoryPage=new ProductCategoryPage();
 
-    public ProductCategoryPageSteps() throws IOException {
+    public ProductCategoryPageSteps() {
     }
 
     @Then("he should be able to view the product category page")
